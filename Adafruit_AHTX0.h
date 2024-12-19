@@ -45,7 +45,7 @@ public:
     @param parent A pointer to the AHTX0 class */
   Adafruit_AHTX0_Humidity(Adafruit_AHTX0 *parent) { _theAHTX0 = parent; }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x1020;
@@ -64,7 +64,7 @@ public:
   Adafruit_AHTX0_Temp(Adafruit_AHTX0 *parent) { _theAHTX0 = parent; }
 
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0x1021;
